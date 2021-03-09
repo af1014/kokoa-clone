@@ -1,0 +1,86 @@
+div {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 66px;
+}
+
+main {
+  background-color: cadetblue;
+  width: 500px;
+  height: 400px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.shape {
+  width: 10px;
+  background-color: white;
+}
+
+.circle {
+  height: 10px;
+  border-radius: 50%;
+}
+
+.box {
+  height: 30px;
+  animation: wave 1s ease-in-out infinite;
+}
+
+.box:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.box:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.box:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+.box:nth-child(5) {
+  animation-delay: 0.4s;
+}
+
+.container {
+  animation: rotate 1s ease-in-out infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(0);
+  }
+  to {
+    transform: rotateZ(180deg);
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: scaleY(1);
+  }
+  25% {
+    transform: scaleY(2.2);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+  100% {
+    transform: scaleY(1);
+  }
+}
